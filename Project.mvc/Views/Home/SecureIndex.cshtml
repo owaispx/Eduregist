@@ -1,0 +1,15 @@
+﻿@* @using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> signInManager
+
+
+<h1>Hii I am Secure Index but not much secure but you can say secure</h1>
+<br />
+@if(signInManager.IsSignedIn(User))
+{
+    <li><a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a></li>
+}
+else
+{
+    <li><a asp-area="" asp-controller="Account" asp-action="Login">Login</a></li>
+} *@
+

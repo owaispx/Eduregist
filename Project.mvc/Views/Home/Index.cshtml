@@ -1,0 +1,316 @@
+﻿
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .box1 {
+            height: 70vh;
+            width: 60vw;
+            border: 1px solid black;
+            text-align: center;
+            margin: auto;
+        }
+
+        .headding {
+            color: blue;
+            font-size: 40px;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+
+        .box1 p {
+            font-size: 20px;
+            cursor: pointer;
+            color: black;
+            word-break: normal;
+        }
+
+        .fbnt {
+            color: rgb(243, 241, 239);
+            border: 2px solid rgb(12, 10, 10);
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgba(9, 141, 9, 0.947);
+        }
+
+        .batans {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: auto;
+        }
+
+        .l1 {
+            height: 20vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .h1 {
+            color: blue;
+        }
+
+        .h2 {
+            text-decoration: none;
+            color: rgb(224, 83, 107);
+            font-size: 20px;
+        }
+
+        .nav2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+            .nav2 ul {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px;
+            }
+
+            .nav2 li a {
+                text-decoration: none;
+                padding: 40px;
+                font-size: 17px;
+                cursor: pointer;
+            }
+
+        .box2 {
+            width: 95vw;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 10px;
+            border-collapse: separate;
+        }
+
+        .space1 {
+            height: 50vh;
+            width: 35vw;
+            background-color: bisque;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+        }
+
+            .space1 p {
+                word-break: normal;
+                font-size: 17px;
+            }
+
+            .space1 h1 {
+                color: blue;
+            }
+
+            .space1 a {
+                color: rgb(243, 241, 239);
+                border: 2px solid rgb(12, 10, 10);
+                text-decoration: none;
+                font-size: 20px;
+                padding: 10px;
+                border-radius: 20px;
+                background-color: rgba(9, 141, 9, 0.947);
+                margin: 40px;
+            }
+
+        .space2 {
+            height: 40vh;
+            width: 25vh;
+            border: 1px solid black;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+            .space2 h3 {
+                padding: 5px;
+            }
+
+            .space2 h4 {
+                color: blue;
+                padding: 5px;
+            }
+
+            .space2 p {
+                padding: 10px;
+            }
+
+            .space2 a {
+                border: 2px solid black;
+                background-color: green;
+                padding: 5px;
+                margin: 5px;
+                color: white;
+                text-decoration: none;
+                border-radius: 10px;
+            }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hover Styles Simplified */
+
+        .box1:hover {
+            transform: scale(1.01);
+        }
+
+        .nav2 li a:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .space2:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .space1:hover {
+            transform: rotate(1deg);
+        }
+
+        .container:nth-child(odd) {
+            background-color: rgba(0, 0, 255, 0.05);
+        }
+
+        .container:nth-child(even) {
+            background-color: rgba(255, 0, 0, 0.05);
+        }
+
+        .space1 a:hover {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .fbnt:hover {
+            background-color: rgba(9, 141, 9, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">
+        <h1 class="headding"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUREGIST</h1>
+        <p>
+            Welcome to Eduregist, where education meets innovation. As a dedicated platform for learning, Eduregist
+            serves as a comprehensive registry of knowledge, offering a curated collection of resources spanning various
+            subjects. Our mission is to streamline the educational journey, providing a one-stop hub for students,
+            educators, and lifelong learners. Join our dynamic community and explore a world where curiosity is
+            celebrated, and the pursuit of knowledge knows no bounds. Eduregist: where education comes to life.
+        </p>
+        <div class="batans">
+            <a class="fbnt" href="">Get unlimited lerning</a>
+            <a class="fbnt" href="">Explore cources</a>
+        </div>
+
+    </div>
+
+    <div class="box2">
+        <div class="l1">
+            <h1 class="h1">Explore top subjects</h1>
+            <a href="" class="h2">View all subjects</a>
+        </div>
+        <div class="nav2">
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="" asp-action="">
+                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        Business & Management
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="" asp-action="">
+                        <i class="fa fa-pencil-square-o"
+                           aria-hidden="true"></i>
+                        Teaching
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="" asp-action="">
+                        <i class="fa fa-laptop" aria-hidden="true"></i> Tech
+                        & IT
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="" asp-action="">
+                        <i class="fa fa-language" aria-hidden="true"></i>
+                        Programing
+                    </a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="" asp-action="">
+                        <i class="fa fa-flask" aria-hidden="true"></i>
+                        Science Engenering & Math
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="container">
+            <div class="space1">
+                <h1>
+                    Business & Management
+                </h1>
+                <p>
+                    Boss it in business with our specialist upskilling courses, industry certifications and high-flying
+                    degrees.
+
+                    No matter what your goals are, leading experts from the likes of Accenture, AWS and Deakin
+                    University
+                    will guide you to achieve them. From data analytics to digital marketing, start learning from the
+                    best.
+
+                    Explore courses
+                    The course was beautifully conceptualised, and well presented. The videos were lucid, clear,
+                    articulate
+                    and informative.
+
+                    Charles, UK
+
+                </p> <br>
+                <a href=""> Explore cources</a>
+            </div>
+
+            <div class="space2">
+                <h4>Business & Management</h4>
+                <h3>Accounting 101</h3>
+                <p>
+                    Master the fundamentals of financial accounting to build skill and knowledge for your finscce career
+                </p>
+                <a href=""> Short cource </a>
+            </div>
+            <div class="space2">
+                <h4>IT& Computer Science</h4>
+                <h3>Cyber Security Operations</h3>
+                <p>Upskill in cyber security operations and inhance your working knowledge of cyber security </p>
+                <a href=""> Short cource </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

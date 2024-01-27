@@ -1,0 +1,209 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> signInManager
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Project.mvc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header {
+            background-color: bisque;
+            border: 2px solid black;
+            
+            position: sticky;
+            top: 0;
+        }
+
+        * {
+            padding: 0px;
+            margin: 0;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding :15px;
+        }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                list-style-type: none;
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+        a:hover {
+            background-color: rgb(240, 237, 231);
+            transform: scale(1.1);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+        }
+
+        nav h1 {
+            color: blue;
+            font-size: 40px;
+            font-family: sans-serif;
+           
+        }
+
+        
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 50px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.footer-logo h1 {
+    font-size: 1.5rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info p {
+    margin-top: 10px;
+}
+
+
+.footer-links a:hover {
+    color: #ffd700; 
+
+/* Responsive adjustments */
+  /*    media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }   */
+
+    .footer-links ul {
+        margin-top: 10px;
+    }
+
+        .navtxt {
+            border: 2px solid black;
+            color: green;
+        }
+
+        /* nav ul li p {
+            border: 2px solid black;
+            color: green;
+        } */
+
+    </style>
+    
+</head> 
+<body>
+    <header>
+        <nav>
+            <h1> <i class="fa fa-graduation-cap" aria-hidden="true"></i> EDUREGIST</h1>
+            <ul>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index"> <i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Cources"> <i class="fa fa-book" aria-hidden="true"></i> Cources</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Privacy"> <i class="fa fa-product-hunt" aria-hidden="true"></i> Privacy</a></li>
+                
+
+                @if (signInManager.IsSignedIn(User))
+                {
+                    if (User.IsInRole("Admin"))
+                    {
+                        <li><a asp-area="" asp-controller="Pages" asp-action="List"> <i class="fa fa-list-alt" aria-hidden="true"></i> List</a></li>
+                        <li><a asp-area="" asp-controller="Pages" asp-action="Create"> <i class="fa fa-plus-square-o" aria-hidden="true"></i> Create</a></li>
+
+                    }
+                   
+
+                    <li><a asp-area="" asp-controller="Account" asp-action="Logout"> <i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                    <li><p class="navtxt"> <i class="fa fa-user" aria-hidden="true"></i> @User.Identity?.Name </p></li>
+
+                   
+
+
+                }
+                else
+                {
+                    <li><a asp-area="" asp-controller="Account" asp-action="Register"> <i class="fa fa-registered" aria-hidden="true"></i> Register</a></li>
+
+                    <li><a asp-area="" asp-controller="Account" asp-action="Login"> <i class="fa fa-sign-in" aria-hidden="true"></i> Login</a></li>
+                }
+
+            </ul>
+
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+               
+                <h1 <i class="fa fa-graduation-cap" aria-hidden="true"></i> EduRegist</h1>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 EduRegist. All Rights Reserved.</p>
+                <p>Address: 123 Education Street, Cityville, State</p>
+                <p>Email: info@eduregist.com</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

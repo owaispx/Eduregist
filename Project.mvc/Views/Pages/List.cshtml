@@ -1,0 +1,95 @@
+﻿
+@{
+}
+
+
+
+@model List<Intern>
+<style>
+    /* Optional: Add some spacing and styling to the table */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    /* Style the action buttons */
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        text-decoration: none;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: 1px solid #007bff;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        border: 1px solid #dc3545;
+    }
+    h2{
+        text-align:center;
+        margin:40px;
+    }
+</style>
+
+
+<h2>Intern List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var intern in Model)
+            {
+                <tr>
+                    <td>@intern.Id</td>
+                    <td>@intern.Name</td>
+                    <td>@intern.Email</td>
+                    <td>@intern.Phone</td>
+                    <td>@intern.Address</td>
+                    <td>
+                        <a class="btn btn-primary" asp-controller="Pages"
+                        asp-action="Edit" asp-route-id="@intern.Id">
+                            Edit Details
+                        </a>
+
+                        <a class="btn btn-danger" asp-controller="Pages"
+                        asp-action="Delete" asp-route-id="@intern.Id">
+                            Delete Intern
+                        </a>
+                    </td>
+                </tr>
+            }
+
+        }
+
+    </tbody>
+</table>

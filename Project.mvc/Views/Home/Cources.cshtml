@@ -1,0 +1,129 @@
+﻿<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #f5f5f5;
+    }
+
+    .grid {
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        width: 100vw;
+        padding: 20px;
+    }
+
+    .box {
+        height: 60vh;
+        width: 25vw;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .box h2 {
+            color: blue;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .box a {
+            align-self: flex-end;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid gray;
+            background-color: green;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .box a:hover {
+                background-color: darkgreen;
+            }
+
+</style>
+<div class="grid">
+    <div class="box">
+        <h2>Programming and Development:</h2>
+        <p>
+            Introduction to Python Programming
+            Web Development Fundamentals (HTML, CSS, JavaScript)
+            Java Programming Basics
+            Full-Stack Development with Node.js and React
+        </p>
+        <a href="">book</a>
+    </div>
+    <div class="box">
+        <h2>Data Science and Analytics::</h2>
+        <p>
+            Introduction to Data Science using Python
+            Data Analysis with Pandas and NumPy
+            Machine Learning Fundamentals
+            Data Visualization using Matplotlib and Seaborn
+        </p>
+        <a href="">book</a>
+    </div>
+    <div class="box">
+        <h2>Digital Marketing:</h2>
+        <p>
+            Digital Marketing Essentials
+            Social Media Marketing Strategies
+            Search Engine Optimization (SEO)
+            Email Marketing Fundamentals
+        </p>
+        <a href="">book</a>
+    </div>
+    <div class="box">
+        <h2>Language Learning:</h2>
+        <p>
+            English for Beginners
+            Conversational Spanish
+            French Language Basics
+            Mandarin Chinese for Travelers
+        </p>
+        <a href="">book</a>
+    </div>
+    <div class="box">
+        <h2>Certifications and Exams:</h2>
+        <p>
+            CompTIA A+ Certification Prep
+            Project Management Professional (PMP) Exam Preparation
+            TOEFL Exam Preparation
+            GRE Quantitative Reasoning
+        </p>
+        <a href="">book</a>
+    </div>
+    <div class="box">
+        <h2>Career Development:</h2>
+        <p>
+            Effective Resume Writing
+            Job Interview Skills and Techniques
+            Leadership and Management Essentials
+            Building a Personal Brand
+        </p>
+        <a href="">book</a>
+    </div>
+</div>

@@ -1,0 +1,160 @@
+﻿@*
+ 
+*@
+@{
+
+}
+  <style>
+    h1 {
+        text-align: center;
+        font-family: 'Helvetica Neue', sans-serif;
+        color: #333;
+    }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Helvetica Neue', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .signup-page {
+        max-width: 500px;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .signup-page:hover {
+            transform: scale(1.02);
+        }
+
+        .signup-page h1 {
+            color: #460744;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+    .form-label {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .form-input,
+    .form-input-email,
+    .form-input-phone,
+    .form-input-address {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 2px solid #3498db;
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+        .form-input:focus,
+        .form-input-email:focus,
+        .form-input-phone:focus,
+        .form-input-address:focus {
+            border-color: #007bff;
+        }
+
+    button {
+        background-color: #3498db;
+        color: #fff;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+
+        button:hover {
+            background-color: #217dbb;
+            transform: translateY(-3px);
+        }
+
+    .data {
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+        .data h3 {
+            color: #3498db;
+            padding:30px;
+        }
+
+        .data p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* Optional: Add some styling for a button or input fields if needed */
+        .data button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .data input {
+            width: 100%;
+            padding: 30px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+    div.full {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    </style>
+
+
+
+<div class="full">
+
+    <div class="data">
+        <h3>EDUREGIST</h3>
+        <P>
+            Welcome to EduRegist, where seamless access meets educational excellence! Unlock the gateway to a world
+            of learning with our user-friendly login portal. Your journey begins here, where innovation meets
+            convenience, ensuring a hassle-free experience as you embark on your educational adventure. Dive into a
+            realm of possibilities and knowledge with just a click. Join EduRegist today, where logging in is the
+            first step towards unlocking the doors to a brighter future. Let the journey commence!
+        </P>
+    </div>
+    <form class="signup-page" method="post">
+
+        <h1>Register For Internship</h1>
+        <label class="form-label"> Name</label><br />
+        <input class="form-input" type="text" placeholder="Enter Name here" name="name" required><br />
+        <label class="form-label">Email</label><br />
+        <input class="form-input-email" type="email" placeholder="Enter Email here" name="email" required><br />
+        <label class="form-label">Contact</label><br />
+        <input class="form-input" type="int" placeholder="Enter Phone Number Here" name="phone" required><br />
+
+        <label class="form-label">Address</label><br />
+        <input class="form-input" type="text" placeholder="Enter Address here" name="Address" required><br />
+        <button type="submit">submit</button>
+    </form>
+</div>
